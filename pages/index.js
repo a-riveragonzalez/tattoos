@@ -9,7 +9,7 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
+        <p className='text-2xl font-bold '>[Your Self Introduction]</p>
         <p>
           (This is a sample website - you will be building a site like this on{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
