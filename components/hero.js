@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="w-full h-full ">
+    <section className="w-full h-full pb-12">
       <div className="container mx-auto relative bg-[url('/images/hero.jpg')] bg-center bg-cover max-w-5xl">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center ">

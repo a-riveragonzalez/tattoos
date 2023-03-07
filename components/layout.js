@@ -84,7 +84,7 @@ export default function Layout({ children, home }) {
         </div>
 
         <a className="text-white inline-flex hover:no-underline" href="https://github.com/a-riveragonzalez">
-          <p>Designed by : </p>
+          <p>designed by : </p>
           <FontAwesomeIcon icon={faGithub} style={{ fontSize: 20}} className="pt-1 pl-1" />
         </a>
       </footer>
