@@ -10,6 +10,16 @@ export default function Layout({ children, home }) {
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://kit.fontawesome.com/2af300434d.js"
+          crossorigin="anonymous"
+        ></script>
         <meta
           name="description"
           content="Learn how to build a personal website using Next.js"
@@ -24,67 +34,77 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className="">
-        {home ? (
-          <>
-            <nav className="mx-auto flex items-center justify-between py-4 px-6 bg-gray-400">
-              <div className="flex lg:flex-1">
-                <a href="#" className="-m-1.5 p-1.5 inline-flex hover:decoration-[#4f46e5]">
-                  <span className="sr-only">Your Company</span>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt=""
-                  />
-                  <p className="text-[#4f46e5] text-2xl  ml-2 ">BizzyTats</p>
-                </a>
-              </div>
-              
-
-              <div className="">
-                <a
-                  href="#"
-                  className="my-1 inline-block rounded bg-[#4f46e5] py-2 px-2 text-base font-medium text-white transition hover:bg-opacity-90 md:px-9 lg:px-6 xl:px-9"
-                >
-                  Contact <span aria-hidden="true">&rarr;</span>
-                </a>
-              </div>
-            </nav>
-            {/* <Image
-              priority
-              src="/images/profile.jpg"
-              className=""
-              height={144}
-              width={144}
-              alt=""
-            />
-            <h1 className="">{name}</h1> */}
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className=""
-                height={108}
-                width={108}
+        <nav className="mx-auto flex items-center justify-between py-4 px-6 bg-gray-400">
+          <div className="flex lg:flex-1">
+            <Link
+              href="/"
+              className="-m-1.5 p-1.5 inline-flex hover:decoration-[#4f46e5]"
+            >
+              <span className="sr-only">Your Company</span>
+              <img
+                className="h-8 w-auto"
+                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                 alt=""
               />
+              <p className="text-[#4f46e5] text-2xl ml-2">BizzyTats</p>
             </Link>
-            <h2 className="">
-              <Link href="/" className="">
-                {name}
+          </div>
+
+          {home ? (
+            <div className="">
+              <Link
+                href="/form"
+                className="my-1 inline-block rounded bg-[#4f46e5] py-2 px-2 text-base font-medium text-white transition hover:bg-opacity-90 md:px-9 lg:px-6 xl:px-9"
+              >
+                Contact <span aria-hidden="true">&rarr;</span>
               </Link>
-            </h2>
-          </>
-        )}
+            </div>
+          ) : (
+            <div className="">
+              <Link
+                href="/"
+                className="my-1 inline-block rounded bg-[#4f46e5] py-2 px-2 text-base font-medium text-white transition hover:bg-opacity-90 md:px-9 lg:px-6 xl:px-9"
+              >
+                Home <span aria-hidden="true">&rarr;</span>
+              </Link>
+            </div>
+          )}
+        </nav>
       </header>
       <main>{children}</main>
-      {/* {!home && (
-        <div className="">
-          <Link href="/">← Back to home</Link>
+      <footer className="bg-black">
+        <div className="text-white">
+        <i class="fa-brands fa-instagram"/>
         </div>
-      )} */}
+      </footer>
     </>
   );
 }
+
+// <Image
+//   priority
+//   src="/images/profile.jpg"
+//   className=""
+//   height={144}
+//   width={144}
+//   alt=""
+// />
+// <h1 className="">{name}</h1>
+
+//   <>
+//     <Link href="/">
+//       <Image
+//         priority
+//         src="/images/profile.jpg"
+//         className=""
+//         height={108}
+//         width={108}
+//         alt=""
+//       />
+//     </Link>
+//     <h2 className="">
+//       <Link href="/" className="">
+//         {name}
+//       </Link>
+//     </h2>
+//   </>

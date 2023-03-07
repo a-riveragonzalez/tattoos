@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import Layout from "../components/layout";
 
 export default function Form() {
@@ -8,10 +7,7 @@ export default function Form() {
       <Head>
         <title>Consultation Form</title>
       </Head>
-      <h1>First Post</h1>
-      <h2>
-        <Link href="/">Back to home</Link>
-      </h2>
+      <h1>Form please</h1>
     </Layout>
   );
 }
