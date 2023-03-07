@@ -2,6 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faGithub } from "@fortawesome/free-brands-svg-icons";
+
 const name = "Bizzy";
 export const siteTitle = "Bizzy Tats";
 
@@ -34,7 +37,7 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className="">
-        <nav className="mx-auto flex items-center justify-between py-4 px-6 bg-gray-400">
+        <nav className="mx-auto flex items-center justify-between py-4 px-6 bg-[#020609]">
           <div className="flex lg:flex-1">
             <Link
               href="/"
@@ -71,11 +74,19 @@ export default function Layout({ children, home }) {
           )}
         </nav>
       </header>
-      <main>{children}</main>
-      <footer className="bg-black">
-        <div className="text-white">
-        <i class="fa-brands fa-instagram"/>
+      <main className="bg-[#020609]">{children}</main>
+      <footer className="bg-black text-center py-2">
+        <div>
+          <a className="text-white inline-flex" href="">
+            <FontAwesomeIcon icon={faInstagram} style={{ fontSize: 30 }} />
+            <p className="pl-2">bizzytats &copy; 2023</p>
+          </a>
         </div>
+
+        <a className="text-white inline-flex hover:no-underline" href="https://github.com/a-riveragonzalez">
+          <p>Designed by : </p>
+          <FontAwesomeIcon icon={faGithub} style={{ fontSize: 20}} className="pt-1 pl-1" />
+        </a>
       </footer>
     </>
   );
