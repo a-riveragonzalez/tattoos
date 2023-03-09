@@ -16,7 +16,7 @@ export default function About() {
                 Tattoo Artist
               </p>
               <p class="mt-6 text-lg leading-8 text-gray-600">
-                Located in Los Angeles, California. I have years of experience
+                I have years of experience
                 and have been dedicated myself to perfecting my craft. Whether
                 you are looking for a small and delicate design or a full-sleeve
                 masterpiece, I am committed to bringing your vision to life and
@@ -28,7 +28,8 @@ export default function About() {
                     <FontAwesomeIcon icon={faPenNib} /> Realism.
                   </dt>
                   <dd class="inline">
-                  {" "}Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    {" "}
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Maiores impedit perferendis suscipit eaque, iste dolor
                     cupiditate blanditiis ratione.
                   </dd>
@@ -40,7 +41,8 @@ export default function About() {
                     tattoos.
                   </dt>
                   <dd class="inline">
-                  {" "}Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
+                    {" "}
+                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
                     qui lorem cupidatat commodo.
                   </dd>
                 </div>
@@ -51,7 +53,8 @@ export default function About() {
                     plans.
                   </dt>
                   <dd class="inline">
-                    {" "}To promote healing and protect the longevity of their new
+                    {" "}
+                    To promote healing and protect the longevity of their new
                     tattoo.
                   </dd>
                 </div>
@@ -59,7 +62,7 @@ export default function About() {
             </div>
           </div>
           <img
-            src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+            src="/images/horizontal-tattoo.jpg"
             alt="Product screenshot"
             class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
             width="2432"
