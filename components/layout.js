@@ -67,7 +67,7 @@ export default function Layout({ children, home }) {
                 href="/"
                 className="my-1 inline-block rounded bg-[#4f46e5] py-2 px-2 text-base font-medium text-white transition hover:bg-opacity-90 md:px-9 lg:px-6 xl:px-9"
               >
-                Home <span aria-hidden="true">&rarr;</span>
+                <span aria-hidden="true">&larr;</span> Home 
               </Link>
             </div>
           )}
