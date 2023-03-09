@@ -43,13 +43,12 @@ export default function Layout({ children, home }) {
               href="/"
               className="-m-1.5 p-1.5 inline-flex hover:decoration-[#4f46e5]"
             >
-              <span className="sr-only">Your Company</span>
               <img
-                className="h-8 w-auto"
+                className="h-9 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                 alt=""
               />
-              <p className="text-[#4f46e5] text-2xl ml-2">BizzyTats</p>
+              <p className="text-[#4f46e5] text-3xl ml-2">BizzyTats</p>
             </Link>
           </div>
 
@@ -83,9 +82,16 @@ export default function Layout({ children, home }) {
           </a>
         </div>
 
-        <a className="text-white inline-flex hover:no-underline" href="https://github.com/a-riveragonzalez">
+        <a
+          className="text-white inline-flex hover:no-underline"
+          href="https://github.com/a-riveragonzalez"
+        >
           <p>designed by : </p>
-          <FontAwesomeIcon icon={faGithub} style={{ fontSize: 20}} className="pt-1 pl-1" />
+          <FontAwesomeIcon
+            icon={faGithub}
+            style={{ fontSize: 20 }}
+            className="pt-1 pl-1"
+          />
         </a>
       </footer>
     </>
