@@ -1,5 +1,3 @@
-import * as te from 'tw-elements';
-
 export default function Gallery() {
   return (
     <>
@@ -63,7 +61,7 @@ export default function Gallery() {
             </div>
           </div>
         </div>
-      </section>
+      </section> 
     </>
   );
 }
