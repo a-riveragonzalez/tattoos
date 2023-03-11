@@ -13,16 +13,6 @@ export default function Layout({ children, home }) {
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-          crossorigin="anonymous"
-        />
-        <script
-          src="https://kit.fontawesome.com/2af300434d.js"
-          crossorigin="anonymous"
-        ></script>
         <meta
           name="description"
           content="Learn how to build a personal website using Next.js"
