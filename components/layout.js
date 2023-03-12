@@ -31,14 +31,14 @@ export default function Layout({ children, home }) {
           <div className="flex lg:flex-1">
             <Link
               href="/"
-              className="-m-1.5 p-1.5 inline-flex hover:decoration-[#4f46e5]"
+              className="-m-1.5 p-1.5 inline-flex hover:decoration-white"
             >
               <img
                 className="h-9 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                src="https://tailwindui.com/img/logos/mark.svg?color=white"
                 alt=""
               />
-              <p className="text-[#4f46e5] text-3xl ml-2">BizzyTats</p>
+              <p className="text-white text-3xl ml-2">BizzyTats</p>
             </Link>
           </div>
 
@@ -46,7 +46,7 @@ export default function Layout({ children, home }) {
             <div className="">
               <Link
                 href="/form"
-                className="my-1 inline-block rounded bg-[#4f46e5] py-2 px-2 text-base font-medium text-white transition hover:bg-opacity-90 md:px-9 lg:px-6 xl:px-9"
+                className="my-1 inline-block rounded bg-white py-1 px-2 text-base font-medium text-black transition hover:bg-opacity-90 md:px-9 lg:px-6 xl:px-9"
               >
                 Contact <span aria-hidden="true">&rarr;</span>
               </Link>
@@ -55,7 +55,7 @@ export default function Layout({ children, home }) {
             <div className="">
               <Link
                 href="/"
-                className="my-1 inline-block rounded bg-[#4f46e5] py-2 px-2 text-base font-medium text-white transition hover:bg-opacity-90 md:px-9 lg:px-6 xl:px-9"
+                className="my-1 inline-block rounded bg-white py-1 px-2 text-base font-medium text-black transition hover:bg-opacity-90 md:px-9 lg:px-6 xl:px-9"
               >
                 <span aria-hidden="true">&larr;</span> Home 
               </Link>
@@ -64,7 +64,7 @@ export default function Layout({ children, home }) {
         </nav>
       </header>
       <main className="bg-[#020609]">{children}</main>
-      <footer className="bg-black text-center py-3">
+      <footer className="bg-black text-center pt-2 pb-6">
         <div>
           <a className="text-white inline-flex" href="">
             <FontAwesomeIcon icon={faInstagram} style={{ fontSize: 30 }} />
