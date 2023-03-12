@@ -4,7 +4,7 @@ export default function Schedule() {
   return (
     <section className="w-full h-max py-12  bg-black">
       <div className="container mx-auto relative bg-[url('/images/redtattoosign.jpg')] bg-top bg-cover bg-no-repeat">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-2xl py-28 sm:py-48 lg:py-80 xl:py-96">
           <div className="text-center ">
             <Link
               href="/form"
