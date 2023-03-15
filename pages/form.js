@@ -69,8 +69,13 @@ export default function Form() {
               />
             </div>
 
-            <div class="flex items-center">
-              <p class="text-sm text-gray-500">Are you over 18?</p>
+            <div class="flex items-center py-2">
+              <div
+                class="text-sm font-semibold leading-6 text-gray-900 pr-3 "
+                aria-hidden="true"
+              >
+                Are you over 18?
+              </div>
 
               <input
                 id="push-nothing"
@@ -80,7 +85,7 @@ export default function Form() {
               />
               <label
                 for="push-nothing"
-                class="ml-3 block text-sm font-medium leading-6 text-gray-900"
+                class="ml-3 block text-sm font-medium leading-6 text-gray-900 pr-3 "
               >
                 Yes
               </label>
@@ -104,7 +109,7 @@ export default function Form() {
                 for="street-address"
                 class="block text-sm font-medium leading-6 text-gray-900"
               >
-                Email 
+                Email
               </label>
               <input
                 type="text"
@@ -120,7 +125,7 @@ export default function Form() {
                 for="street-address"
                 class="block text-sm font-medium leading-6 text-gray-900"
               >
-                Phone Number 
+                Phone Number
               </label>
               <input
                 type="text"
@@ -151,7 +156,7 @@ export default function Form() {
               <label class="block text-sm font-medium leading-6 text-gray-900">
                 Upload a tattoo referecne
               </label>
-              <div class="mt-2 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6">
+              <div class="mt-2 flex justify-center rounded-md border-2 border-dashed bg-white px-6 pt-5 pb-6">
                 <div class="space-y-1 text-center">
                   <svg
                     class="mx-auto h-12 w-12 text-gray-400"
@@ -223,7 +228,7 @@ export default function Form() {
               <label class="block text-sm font-medium leading-6 text-gray-900">
                 Upload a picture of placement
               </label>
-              <div class="mt-2 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6">
+              <div class="mt-2 flex justify-center rounded-md border-2 border-dashed bg-white px-6 pt-5 pb-6">
                 <div class="space-y-1 text-center">
                   <svg
                     class="mx-auto h-12 w-12 text-gray-400"
@@ -258,9 +263,8 @@ export default function Form() {
                 </div>
               </div>
             </div>
-
           </div>
-          <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
+          <div class="bg-gray-200 px-4 py-3 text-right sm:px-6 ">
             <button
               type="submit"
               class="inline-flex justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
@@ -272,7 +276,6 @@ export default function Form() {
 
         {/* add this after the form is submitted 
         <div> We will reach out to you as soon as possible.</div> */}
-
       </section>
     </Layout>
   );
