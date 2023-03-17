@@ -5,9 +5,14 @@ import React, { useState } from "react";
 export default function Form() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [message, setMessage] = useState("");
-  // const [checked, setChecked] = useState(false);
+  const [email, setEmail] = useState("");
+  const [phoneNum, setPhoneNum] = useState("");
+  const [tatDes, setTatDes] = useState("");
+  const [approxSize, setApproxSize] = useState("");
+  const [placement, setPlacement] = useState("");
+  // const [age, setAge] = useState(false);
+  // upload reference
+  // upload placement
 
   function handleChange(event) {
     console.log(event.target.checked);
@@ -20,8 +25,25 @@ export default function Form() {
         setLastName(event.target.value);
         console.log(event.target.value);
         break;
-      case "push-age":
-        console.log(event);
+      case "email":
+        setEmail(event.target.value);
+        console.log(event.target.value);
+        break;
+      case "phone-num":
+        setPhoneNum(event.target.value);
+        console.log(event.target.value);
+        break;
+      case "tat-des":
+        setTatDes(event.target.value);
+        console.log(event.target.value);
+        break;
+      case "approx-size":
+        setApproxSize(event.target.value);
+        console.log(event.target.value);
+        break;
+      case "placement":
+        setPlacement(event.target.value);
+        console.log(event.target.value);
         break;
     }
   }
@@ -78,7 +100,7 @@ export default function Form() {
               />
             </div>
 
-            {/* over 18 div */}
+            {/* ?????? TO DO ??????? over 18 div */}
             <div className="flex items-center py-2">
               <div
                 className="text-sm font-semibold leading-6 text-gray-900 pr-3 "
@@ -116,54 +138,64 @@ export default function Form() {
               </label>
             </div>
 
+            {/* email div */}
             <div className="">
               <label
-                for="street-address"
+                for="email"
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
                 Email
               </label>
               <input
                 type="text"
-                name="street-address"
-                id="street-address"
-                autocomplete="street-address"
+                name="email"
+                id="email"
+                autocomplete="email"
+                value={email}
+                onChange={handleChange}
                 className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
 
+            {/* phone number div */}
             <div className="">
               <label
-                for="street-address"
+                for="phone-num"
                 class="block text-sm font-medium leading-6 text-gray-900"
               >
                 Phone Number
               </label>
               <input
                 type="text"
-                name="street-address"
-                id="street-address"
-                autocomplete="street-address"
+                name="phone-num"
+                id="phone-num"
+                autocomplete="phone-num"
+                value={phoneNum}
+                onChange={handleChange}
                 class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
 
+            {/* tattoo description div */}
             <div class="">
               <label
-                for="street-address"
+                for="tat-des"
                 class="block text-sm font-medium leading-6 text-gray-900"
               >
                 Tattoo Description
               </label>
               <input
                 type="text"
-                name="street-address"
-                id="street-address"
-                autocomplete="street-address"
+                name="tat-des"
+                id="tat-des"
+                autocomplete="tat-des"
+                value={tatDes}
+                onChange={handleChange}
                 class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
 
+            {/* ?????? TO DO ??????? Upload a tattoo referecne div */}
             <div>
               <label class="block text-sm font-medium leading-6 text-gray-900">
                 Upload a tattoo referecne
@@ -204,6 +236,7 @@ export default function Form() {
               </div>
             </div>
 
+            {/* Approximate size div */}
             <div class="">
               <label
                 for="street-address"
@@ -220,6 +253,7 @@ export default function Form() {
               />
             </div>
 
+            {/* Placement div */}
             <div class="">
               <label
                 for="street-address"
@@ -236,6 +270,7 @@ export default function Form() {
               />
             </div>
 
+            {/* ?????? TO DO ??????? Upload a picture of placement */}
             <div>
               <label class="block text-sm font-medium leading-6 text-gray-900">
                 Upload a picture of placement
@@ -276,6 +311,8 @@ export default function Form() {
               </div>
             </div>
           </div>
+          
+          {/* submit button */}
           <div class="bg-gray-200 px-4 py-3 text-right sm:px-6 ">
             <button
               type="submit"
