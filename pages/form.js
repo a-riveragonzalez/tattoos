@@ -3,25 +3,26 @@ import Layout from "../components/layout";
 import React, { useState } from "react";
 
 export default function Form() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [checked, setChecked] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [message, setMessage] = useState("");
+  // const [checked, setChecked] = useState(false);
 
   function handleChange(event) {
     console.log(event.target.checked);
     switch (event.target.id) {
-      case "form-name":
-        setName(event.target.value);
+      case "first-name":
+        setFirstName(event.target.value);
+        console.log(event.target.value);
         break;
-      case "form-email":
-        setEmail(event.target.value);
+      case "last-name":
+        setLastName(event.target.value);
+        console.log(event.target.value);
         break;
-      case "form-message":
-        setMessage(event.target.value);
+      case "push-age":
+        console.log(event);
         break;
-      case "form-checkbox":
-        setChecked(event.target.checked);
     }
   }
 
@@ -35,82 +36,90 @@ export default function Form() {
         <title>Consultation Form</title>
       </Head>
       <section className="block max-w-7xl mx-auto rounded-lg bg-gray-200 p-6 shadow-lg dark:bg-neutral-700">
-
-        <div className="">Contact Me : </div>
+        <p className="text-center text-3xl">Contact Me : </p>
 
         <form action="#" method="POST">
-          <div class="shadow sm:overflow-hidden sm:rounded-md">
-            <div class="">
+          <div className="shadow sm:overflow-hidden sm:rounded-md">
+            {/* first name div */}
+            <div className="">
               <label
-                for="street-address"
-                class="block text-sm font-medium leading-6 text-gray-900"
+                for="first-name"
+                className="block text-sm font-medium leading-6 text-gray-900"
               >
                 First Name
               </label>
               <input
                 type="text"
-                name="street-address"
-                id="street-address"
-                autocomplete="street-address"
-                class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                name="first-name"
+                id="first-name"
+                autocomplete="first-name"
+                value={firstName}
+                onChange={handleChange}
+                className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
 
-            <div class="">
+            {/* last name div */}
+            <div className="">
               <label
-                for="street-address"
-                class="block text-sm font-medium leading-6 text-gray-900"
+                for="last-name"
+                className="block text-sm font-medium leading-6 text-gray-900"
               >
                 Last Name
               </label>
               <input
                 type="text"
-                name="street-address"
-                id="street-address"
-                autocomplete="street-address"
-                class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                name="last-name"
+                id="last-name"
+                autocomplete="last-name"
+                value={lastName}
+                onChange={handleChange}
+                className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
 
-            <div class="flex items-center py-2">
+            {/* over 18 div */}
+            <div className="flex items-center py-2">
               <div
-                class="text-sm font-semibold leading-6 text-gray-900 pr-3 "
+                className="text-sm font-semibold leading-6 text-gray-900 pr-3 "
                 aria-hidden="true"
               >
                 Are you over 18?
               </div>
 
               <input
-                id="push-nothing"
-                name="push-notifications"
+                id="push-yes"
+                name="push-age"
                 type="radio"
-                class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                onChange={handleChange}
+                className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
               />
               <label
-                for="push-nothing"
-                class="ml-3 block text-sm font-medium leading-6 text-gray-900 pr-3 "
+                for="push-yes"
+                className="ml-3 block text-sm font-medium leading-6 text-gray-900 pr-3"
               >
                 Yes
               </label>
 
               <input
-                id="push-nothing"
-                name="push-notifications"
+                id="push-no"
+                name="push-age"
                 type="radio"
-                class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                onChange={handleChange}
+                className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
               />
               <label
-                for="push-nothing"
-                class="ml-3 block text-sm font-medium leading-6 text-gray-900"
+                for="push-no"
+                className="ml-3 block text-sm font-medium leading-6 text-gray-900"
               >
                 No
               </label>
             </div>
 
-            <div class="">
+            <div className="">
               <label
                 for="street-address"
-                class="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 text-gray-900"
               >
                 Email
               </label>
@@ -119,11 +128,11 @@ export default function Form() {
                 name="street-address"
                 id="street-address"
                 autocomplete="street-address"
-                class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
 
-            <div class="">
+            <div className="">
               <label
                 for="street-address"
                 class="block text-sm font-medium leading-6 text-gray-900"
