@@ -29,3 +29,8 @@ img {
   max-width: 100%;
   display: block;
 }
+
+.home-image {
+  position: relative;
+  height: 100vh;
+}
