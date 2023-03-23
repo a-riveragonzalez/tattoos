@@ -53,7 +53,7 @@ export default function Form() {
   }
 
   return (
-    <Layout>
+    <Layout form>
       <Head>
         <title>Consultation Form</title>
       </Head>

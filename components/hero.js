@@ -5,7 +5,7 @@ export default function Hero() {
     <>
       <Parallax
         bgImage='/images/hero.jpg'
-        bgImageAlt="city that glows in pink and light blue"
+        bgImageAlt="tattoo supplies"
         strength={800}
         className="home-image"
       >
