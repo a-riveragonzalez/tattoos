@@ -64,7 +64,7 @@ export default function Layout({ children, home }) {
         </nav>
       </header>
       <main className="bg-[#020609]">{children}</main>
-      <footer className="bg-black text-center pt-2 pb-6">
+      <footer className="bg-black text-center pt-6 pb-8">
         <div>
           <a className="text-white inline-flex" href="">
             <FontAwesomeIcon icon={faInstagram} style={{ fontSize: 30 }} />

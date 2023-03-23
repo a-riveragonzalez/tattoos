@@ -1,7 +1,7 @@
 export default function Gallery() {
   return (
     <>
-      <h2 className="text-white text-center">look at this thing, isn't it neat </h2>
+      <h2 className="text-center mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">look at this thing, isn't it neat </h2>
       <section className="columns-1 md:columns-2 xl:columns-3 py-10 pb-20 px-8">
         <div className="pb-5">
           <img
