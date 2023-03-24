@@ -15,7 +15,7 @@ export default function Form() {
   // upload placement
 
   function handleChange(event) {
-    console.log(event.target.checked);
+    // console.log(event.target.checked);
     switch (event.target.id) {
       case "first-name":
         setFirstName(event.target.value);
@@ -44,6 +44,9 @@ export default function Form() {
       case "placement":
         setPlacement(event.target.value);
         console.log(event.target.value);
+        break;
+      case "push-age":
+        console.log(event);
         break;
     }
   }
@@ -110,28 +113,30 @@ export default function Form() {
               </div>
 
               <input
-                id="push-yes"
+                id="push-age"
                 name="push-age"
-                type="radio"
-                onChange={handleChange}
+                type="checkbox"
+                onClick={handleChange}
+                value={true}
                 className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
               />
               <label
-                for="push-yes"
+                for="yes"
                 className="ml-3 block text-sm font-medium leading-6 text-gray-900 pr-3"
               >
                 Yes
               </label>
 
               <input
-                id="push-no"
+                id="push-age"
                 name="push-age"
                 type="radio"
-                onChange={handleChange}
+                onClick={handleChange}
+                value={false}
                 className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
               />
               <label
-                for="push-no"
+                for="no"
                 className="ml-3 block text-sm font-medium leading-6 text-gray-900"
               >
                 No
@@ -239,16 +244,18 @@ export default function Form() {
             {/* Approximate size div */}
             <div class="">
               <label
-                for="street-address"
+                for="approx-size"
                 class="block text-sm font-medium leading-6 text-gray-900"
               >
                 Approximate size
               </label>
               <input
                 type="text"
-                name="street-address"
-                id="street-address"
-                autocomplete="street-address"
+                name="approx-size"
+                id="approx-size"
+                autocomplete="approx-size"
+                value={approxSize}
+                onChange={handleChange}
                 class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -256,16 +263,18 @@ export default function Form() {
             {/* Placement div */}
             <div class="">
               <label
-                for="street-address"
+                for="placement"
                 class="block text-sm font-medium leading-6 text-gray-900"
               >
                 Placement
               </label>
               <input
                 type="text"
-                name="street-address"
-                id="street-address"
-                autocomplete="street-address"
+                name="placement"
+                id="placement"
+                autocomplete="placement"
+                value={placement}
+                onChange={handleChange}
                 class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -311,7 +320,7 @@ export default function Form() {
               </div>
             </div>
           </div>
-          
+
           {/* submit button */}
           <div class="bg-gray-200 px-4 py-3 text-right sm:px-6 ">
             <button
