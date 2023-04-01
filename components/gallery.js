@@ -6,16 +6,16 @@ export default function Gallery() {
       </h2>
 
       {/* toggle  */}
-      <div className="text-center pt-9">
+      <div className="text-center pt-8">
         <label
           for="Toggle3"
-          className="inline-flex items-center p-2 rounded-md cursor-pointer dark:text-gray-800 bg-white"
+          className="inline-flex items-center p-2 rounded-md cursor-pointer text-gray-800 "
         >
           <input id="Toggle3" type="checkbox" className="hidden peer" />
-          <span className="px-4 py-2 rounded-l-md dark:bg-violet-400 peer-checked:dark:bg-gray-300">
+          <span className="px-4 py-2 rounded-l-md bg-blue-400 peer-checked:bg-gray-300">
             Tattoos
           </span>
-          <span className="px-4 py-2 rounded-r-md dark:bg-gray-300 peer-checked:dark:bg-violet-400">
+          <span className="px-4 py-2 rounded-r-md bg-gray-300 peer-checked:bg-blue-400">
             Drawings
           </span>
         </label>
