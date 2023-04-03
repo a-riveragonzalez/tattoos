@@ -338,3 +338,40 @@ export default function Form() {
     </Layout>
   );
 }
+
+// function YesNoForm() {
+//   const [option, setOption] = useState(null);
+
+//   const handleOptionChange = (e) => {
+//     setOption(e.target.value);
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     console.log(`Selected option: ${option}`);
+//   };
+
+//   return (
+//     <form onSubmit={handleSubmit}>
+//       <label>
+//         <input
+//           type="radio"
+//           value="yes"
+//           checked={option === "yes"}
+//           onChange={handleOptionChange}
+//         />
+//         Yes
+//       </label>
+//       <label>
+//         <input
+//           type="radio"
+//           value="no"
+//           checked={option === "no"}
+//           onChange={handleOptionChange}
+//         />
+//         No
+//       </label>
+//       <button type="submit">Submit</button>
+//     </form>
+//   );
+// }
