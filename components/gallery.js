@@ -35,121 +35,125 @@ export default function Gallery() {
 
       {isTat ? (
         <section className="columns-1 md:columns-2 xl:columns-3 py-10 pb-20 px-8">
-          <div className="pb-5">
+                    <div className="pb-5">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+              src="/images/drawings/drawing_thor.png"
             />
           </div>
           <div className="pb-5">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+              src="/images/drawings/drawing_daredevil.png"
             />
           </div>
           <div className="pb-5">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+              src="/images/drawings/drawing_steve_jobs.png"
             />
           </div>
           <div className="pb-5">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+              src="/images/drawings/drawing_elvis.png"
             />
           </div>
           <div className="pb-5">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+              src="/images/drawings/drawing_gum.png"
             />
           </div>
           <div className="pb-5">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+              src="/images/drawings/drawing_neo.png"
             />
           </div>
           <div className="pb-5">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+              src="/images/drawings/drawing_karate_kid.png"
             />
           </div>
-          <div className="">
+          {/* <div className="">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+              src="/images/drawings/drawing_girl.png"
             />
-          </div>
+          </div> */}
+
+
+
+          
         </section>
       ) : (
         <section className="columns-1 md:columns-2 xl:columns-3 py-10 pb-20 px-8">
-          <div className="pb-5">
+<div className="pb-5">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
+              src="/images/tattoos/tattoo_coraline.png"
             />
           </div>
           <div className="pb-5">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
+              src="/images/tattoos/tattoo_batman_joker.png"
             />
           </div>
           <div className="pb-5">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
+              src="/images/tattoos/tattoo_grim.png"
             />
           </div>
           <div className="pb-5">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
+              src="/images/tattoos/tattoo_joker.png"
             />
           </div>
           <div className="pb-5">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
+              src="/images/tattoos/tattoo_soul_eater.png"
             />
           </div>
           <div className="pb-5">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
+              src="/images/tattoos/tattoo_clown_girl_gun.png"
             />
           </div>
           <div className="pb-5">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
+              src="/images/tattoos/tattoo_girl.png"
             />
           </div>
-          <div className="">
+          {/* <div className="">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
-              src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
+              src="/images/tattoos/tattoo_girl.png"
             />
-          </div>
+          </div> */}
         </section>
       )}
     </>
