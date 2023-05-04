@@ -60,16 +60,16 @@ export default function Form() {
       <Head>
         <title>Consultation Form</title>
       </Head>
-      <section className="block max-w-7xl mx-auto rounded-lg bg-gray-200 p-6 shadow-lg dark:bg-neutral-700">
+      <section className="block max-w-7xl mx-auto rounded-lg bg-gray-200 p-6 shadow-lg dark:bg-neutral-700 text-white">
         <p className="text-center text-3xl">Contact Me : </p>
 
-        <form action="#" method="POST">
-          <div className="shadow sm:overflow-hidden sm:rounded-md">
+        <form action="#" method="POST" className="text-white">
+          <div className="shadow sm:overflow-hidden sm:rounded-md ">
             {/* first name div */}
             <div className="">
               <label
                 for="first-name"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6"
               >
                 First Name
               </label>
@@ -80,7 +80,7 @@ export default function Form() {
                 autoComplete="first-name"
                 value={firstName}
                 onChange={handleChange}
-                className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="mt-2 block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
 
@@ -88,7 +88,7 @@ export default function Form() {
             <div className="">
               <label
                 for="last-name"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6"
               >
                 Last Name
               </label>
@@ -99,14 +99,14 @@ export default function Form() {
                 autoComplete="last-name"
                 value={lastName}
                 onChange={handleChange}
-                className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="mt-2 block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
 
             {/* ?????? TO DO ??????? over 18 div */}
             <div className="flex items-center py-2">
               <div
-                className="text-sm font-semibold leading-6 text-gray-900 pr-3 "
+                className="text-sm font-semibold leading-6 pr-3 "
                 aria-hidden="true"
               >
                 Are you over 18?
@@ -122,7 +122,7 @@ export default function Form() {
               />
               <label
                 for="yes"
-                className="ml-3 block text-sm font-medium leading-6 text-gray-900 pr-3"
+                className="ml-3 block text-sm font-medium leading-6 pr-3"
               >
                 Yes
               </label>
@@ -137,7 +137,7 @@ export default function Form() {
               />
               <label
                 for="no"
-                className="ml-3 block text-sm font-medium leading-6 text-gray-900"
+                className="ml-3 block text-sm font-medium leading-6"
               >
                 No
               </label>
@@ -147,7 +147,7 @@ export default function Form() {
             <div className="">
               <label
                 for="email"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6"
               >
                 Email
               </label>
@@ -158,7 +158,7 @@ export default function Form() {
                 autoComplete="email"
                 value={email}
                 onChange={handleChange}
-                className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="mt-2 block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
 
@@ -166,7 +166,7 @@ export default function Form() {
             <div className="">
               <label
                 for="phone-num"
-                class="block text-sm font-medium leading-6 text-gray-900"
+                class="block text-sm font-medium leading-6"
               >
                 Phone Number
               </label>
@@ -177,7 +177,7 @@ export default function Form() {
                 autoComplete="phone-num"
                 value={phoneNum}
                 onChange={handleChange}
-                class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                class="mt-2 block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
 
@@ -185,7 +185,7 @@ export default function Form() {
             <div class="">
               <label
                 for="tat-des"
-                class="block text-sm font-medium leading-6 text-gray-900"
+                class="block text-sm font-medium leading-6"
               >
                 Tattoo Description
               </label>
@@ -196,13 +196,13 @@ export default function Form() {
                 autoComplete="tat-des"
                 value={tatDes}
                 onChange={handleChange}
-                class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                class="mt-2 block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
 
             {/* ?????? TO DO ??????? Upload a tattoo referecne div */}
             <div>
-              <label class="block text-sm font-medium leading-6 text-gray-900">
+              <label class="block text-sm font-medium leading-6">
                 Upload a tattoo referecne
               </label>
               <div class="mt-2 flex justify-center rounded-md border-2 border-dashed bg-white px-6 pt-5 pb-6">
@@ -245,7 +245,7 @@ export default function Form() {
             <div class="">
               <label
                 for="approx-size"
-                class="block text-sm font-medium leading-6 text-gray-900"
+                class="block text-sm font-medium leading-6"
               >
                 Approximate size
               </label>
@@ -256,7 +256,7 @@ export default function Form() {
                 autoComplete="approx-size"
                 value={approxSize}
                 onChange={handleChange}
-                class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                class="mt-2 block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
 
@@ -264,7 +264,7 @@ export default function Form() {
             <div class="">
               <label
                 for="placement"
-                class="block text-sm font-medium leading-6 text-gray-900"
+                class="block text-sm font-medium leading-6"
               >
                 Placement
               </label>
@@ -275,13 +275,13 @@ export default function Form() {
                 autoComplete="placement"
                 value={placement}
                 onChange={handleChange}
-                class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                class="mt-2 block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
 
             {/* ?????? TO DO ??????? Upload a picture of placement */}
             <div>
-              <label class="block text-sm font-medium leading-6 text-gray-900">
+              <label class="block text-sm font-medium leading-6">
                 Upload a picture of placement
               </label>
               <div class="mt-2 flex justify-center rounded-md border-2 border-dashed bg-white px-6 pt-5 pb-6">
