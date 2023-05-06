@@ -164,7 +164,7 @@ export default function Form() {
             <div className="">
               <label
                 for="phone-num"
-                class="block text-sm font-medium leading-6"
+                className="block text-sm font-medium leading-6"
               >
                 Phone Number
               </label>
@@ -175,13 +175,13 @@ export default function Form() {
                 autoComplete="phone-num"
                 value={phoneNum}
                 onChange={handleChange}
-                class="mt-2 block pl-1 w-full text-black rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="mt-2 block pl-1 w-full text-black rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
 
             {/* tattoo description div */}
-            <div class="">
-              <label for="tat-des" class="block text-sm font-medium leading-6">
+            <div className="">
+              <label for="tat-des" className="block text-sm font-medium leading-6">
                 Tattoo Description
               </label>
               <input
@@ -191,19 +191,19 @@ export default function Form() {
                 autoComplete="tat-des"
                 value={tatDes}
                 onChange={handleChange}
-                class="mt-2 pl-1 block w-full text-black rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="mt-2 pl-1 block w-full text-black rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
 
             {/* ?????? TO DO ??????? Upload a tattoo referecne div */}
             <div>
-              <label class="block text-sm font-medium leading-6">
+              <label className="block text-sm font-medium leading-6">
                 Upload a tattoo referecne
               </label>
-              <div class="mt-2 flex justify-center rounded-md border-2 border-dashed bg-white px-6 pt-5 pb-6">
-                <div class="space-y-1 text-center">
+              <div className="mt-2 flex justify-center rounded-md border-2 border-dashed bg-white px-6 pt-5 pb-6">
+                <div className="space-y-1 text-center">
                   <svg
-                    class="mx-auto h-12 w-12 text-gray-400"
+                    className="mx-auto h-12 w-12 text-gray-400"
                     stroke="currentColor"
                     fill="none"
                     viewBox="0 0 48 48"
@@ -216,31 +216,31 @@ export default function Form() {
                       stroke-linejoin="round"
                     />
                   </svg>
-                  <div class="flex text-sm text-gray-600">
+                  <div className="flex text-sm text-gray-600">
                     <label
                       for="file-upload"
-                      class="relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500"
+                      className="relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500"
                     >
                       <span>Upload a file</span>
                       <input
                         id="file-upload"
                         name="file-upload"
                         type="file"
-                        class="sr-only"
+                        className="sr-only"
                       />
                     </label>
-                    <p class="pl-1">or drag and drop</p>
+                    <p className="pl-1">or drag and drop</p>
                   </div>
-                  <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                  <p className="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
                 </div>
               </div>
             </div>
 
             {/* Approximate size div */}
-            <div class="">
+            <div className="">
               <label
                 for="approx-size"
-                class="block text-sm font-medium leading-6"
+                className="block text-sm font-medium leading-6"
               >
                 Approximate size
               </label>
@@ -251,15 +251,15 @@ export default function Form() {
                 autoComplete="approx-size"
                 value={approxSize}
                 onChange={handleChange}
-                class="mt-2 block w-full pl-1 text-black rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="mt-2 block w-full pl-1 text-black rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
 
             {/* Placement div */}
-            <div class="">
+            <div className="">
               <label
                 for="placement"
-                class="block text-sm font-medium leading-6 "
+                className="block text-sm font-medium leading-6 "
               >
                 Placement
               </label>
@@ -270,16 +270,16 @@ export default function Form() {
                 autoComplete="placement"
                 value={placement}
                 onChange={handleChange}
-                class="mt-2 block w-full pl-1 text-black rounded-md border-0 py-1.5 mb-5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="mt-2 block w-full pl-1 text-black rounded-md border-0 py-1.5 mb-5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
 
           {/* submit button */}
-          <div class="bg-gray-200 px-4 py-3 text-center sm:px-6 ">
+          <div className="bg-white px-4 py-3 text-center rounded-md sm:px-6 ">
             <button
               type="submit"
-              class="inline-flex justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+              className="inline-flex justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
             >
               Submit
             </button>
