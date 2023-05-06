@@ -117,11 +117,12 @@ export default function Form() {
                 Are you over 18?
               </div>
 
-              <label>
+              <label className="pr-2">
                 <input
                   type="radio"
                   value="yes"
                   id="option-yes"
+                  className="mr-1"
                   checked={option === "yes"}
                   onChange={handleChange}
                 />
@@ -132,6 +133,7 @@ export default function Form() {
                   type="radio"
                   value="no"
                   id="option-no"
+                  className="mr-1"
                   checked={option === "no"}
                   onChange={handleChange}
                 />
