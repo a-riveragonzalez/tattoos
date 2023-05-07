@@ -63,63 +63,37 @@ export default function Form() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
+
     const response = await fetch("/api/send-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ firstName,lastName, email, phoneNum ,tatDes, approxSize, placement, option }),
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        email,
+        phoneNum,
+        tatDes,
+        approxSize,
+        placement,
+        option,
+      }),
     });
     if (response.ok) {
       alert("Email sent successfully!");
+      // Reset form after successful submission
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPhoneNum("");
+      setTatDes("");
+      setApproxSize("");
+      setPlacement("");
+      setOption(null);
+      setSelectedFile(null);
     } else {
       alert("Error sending email.");
     }
-
-    // const formData = new FormData();
-    // formData.set("firstName", firstName);
-    // formData.append("lastName", lastName);
-    // formData.append("email", email);
-    // formData.append("phoneNum", phoneNum);
-    // formData.append("tatDes", tatDes);
-    // formData.append("approxSize", approxSize);
-    // formData.append("placement", placement);
-    // formData.append("option", option);
-
-    // if (selectedFile) {
-    //   formData.append("selectedFile", selectedFile, selectedFile.name);
-    // }
-    // // TODO: send the form data to the server using an API call
-
-    // console.log(formData);
-
-    // fetch("/api/send-email", {
-    //   method: "POST",
-    //   body: formData,
-    // })
-    //   .then((response) => {
-    //     if (!response.ok) {
-    //       throw new Error("Network response was not ok");
-    //     }
-    //     return response.text();
-    //   })
-    //   .then((data) => {
-    //     console.log("I got here")
-    //     console.log(data);
-    //     // Reset form after successful submission
-    //     setFirstName("");
-    //     setLastName("");
-    //     setEmail("");
-    //     setPhoneNum("");
-    //     setTatDes("");
-    //     setApproxSize("");
-    //     setPlacement("");
-    //     setOption(null);
-    //     setSelectedFile(null);
-    //   })
-    //   .catch((error) => {
-    //     console.error("There was an error submitting the form:", error);
-    //   });
-  }
+  };
 
   return (
     <Layout form>
