@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 const app = express();
-const port = 3001;
+const port = 8080;
 
 const upload = multer();
 
