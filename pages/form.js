@@ -85,6 +85,7 @@ export default function Form() {
         return response.text();
       })
       .then((data) => {
+        console.log("I got here")
         console.log(data);
         // Reset form after successful submission
         setFirstName("");
@@ -319,7 +320,7 @@ export default function Form() {
           <div className="bg-white px-4 py-3 text-center rounded-md sm:px-6 ">
             <button
               type="submit"
-              onSubmit={handleSubmit}
+              onClick={handleSubmit}
               className="inline-flex justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
             >
               Submit
