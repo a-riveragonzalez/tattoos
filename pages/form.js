@@ -11,8 +11,7 @@ export default function Form() {
   const [approxSize, setApproxSize] = useState("");
   const [placement, setPlacement] = useState("");
   const [option, setOption] = useState(null);
-  // upload reference
-  // upload placement
+  const [selectedFile, setSelectedFile] = useState(null);
 
   function handleChange(event) {
     // console.log(event.target.checked);
@@ -53,11 +52,54 @@ export default function Form() {
         setOption(event.target.value);
         console.log(event.target.value);
         break;
+      case "selectedFile":
+        setSelectedFile(event.target.files[0]);
+        console.log(event.target);
+        break;
     }
   }
 
   function handleSubmit(event) {
-    // submit to what exactly?
+    event.preventDefault();
+
+    const formData = new FormData();
+    formData.append("firstName", firstName);
+    formData.append("lastName", lastName);
+    formData.append("email", email);
+    formData.append("phoneNum", phoneNum);
+    formData.append("tatDes", tatDes);
+    formData.append("approxSize", approxSize);
+    formData.append("placement", placement);
+    formData.append("option", option);
+    formData.append("selectedFile", selectedFile);
+    // TODO: send the form data to the server using an API call
+
+    fetch("/api/send-email", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.text();
+      })
+      .then((data) => {
+        console.log(data);
+        // Reset form after successful submission
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPhoneNum("");
+        setTatDes("");
+        setApproxSize("");
+        setPlacement("");
+        setOption(null);
+        setSelectedFile(null);
+      })
+      .catch((error) => {
+        console.error("There was an error submitting the form:", error);
+      });
   }
 
   return (
@@ -73,7 +115,6 @@ export default function Form() {
             {/* first name div */}
             <div className="">
               <label
-                for="first-name"
                 className="block text-sm font-medium leading-6"
               >
                 First Name
@@ -92,7 +133,6 @@ export default function Form() {
             {/* last name div */}
             <div className="">
               <label
-                for="last-name"
                 className="block text-sm font-medium leading-6"
               >
                 Last Name
@@ -144,7 +184,6 @@ export default function Form() {
             {/* email div */}
             <div className="">
               <label
-                for="email"
                 className="block text-sm font-medium leading-6"
               >
                 Email
@@ -163,7 +202,6 @@ export default function Form() {
             {/* phone number div */}
             <div className="">
               <label
-                for="phone-num"
                 className="block text-sm font-medium leading-6"
               >
                 Phone Number
@@ -181,7 +219,9 @@ export default function Form() {
 
             {/* tattoo description div */}
             <div className="">
-              <label for="tat-des" className="block text-sm font-medium leading-6">
+              <label
+                className="block text-sm font-medium leading-6"
+              >
                 Tattoo Description
               </label>
               <input
@@ -202,7 +242,7 @@ export default function Form() {
               </label>
               <div className="mt-2 flex justify-center rounded-md border-2 border-dashed bg-white px-6 pt-5 pb-6">
                 <div className="space-y-1 text-center">
-                  <svg
+                  {/* <svg
                     className="mx-auto h-12 w-12 text-gray-400"
                     stroke="currentColor"
                     fill="none"
@@ -215,10 +255,9 @@ export default function Form() {
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
-                  </svg>
+                  </svg> */}
                   <div className="flex text-sm text-gray-600">
                     <label
-                      for="file-upload"
                       className="relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500"
                     >
                       <span>Upload a file</span>
@@ -227,11 +266,14 @@ export default function Form() {
                         name="file-upload"
                         type="file"
                         className="sr-only"
+                        onChange={handleChange}
                       />
                     </label>
                     <p className="pl-1">or drag and drop</p>
                   </div>
-                  <p className="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                  <p className="text-xs text-gray-500">
+                    PNG, JPG, GIF up to 10MB
+                  </p>
                 </div>
               </div>
             </div>
@@ -239,7 +281,6 @@ export default function Form() {
             {/* Approximate size div */}
             <div className="">
               <label
-                for="approx-size"
                 className="block text-sm font-medium leading-6"
               >
                 Approximate size
@@ -258,7 +299,6 @@ export default function Form() {
             {/* Placement div */}
             <div className="">
               <label
-                for="placement"
                 className="block text-sm font-medium leading-6 "
               >
                 Placement
@@ -279,6 +319,7 @@ export default function Form() {
           <div className="bg-white px-4 py-3 text-center rounded-md sm:px-6 ">
             <button
               type="submit"
+              onSubmit={handleSubmit}
               className="inline-flex justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
             >
               Submit
@@ -292,40 +333,3 @@ export default function Form() {
     </Layout>
   );
 }
-
-// function YesNoForm() {
-//   const [option, setOption] = useState(null);
-
-//   const handleOptionChange = (e) => {
-//     setOption(e.target.value);
-//   };
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     console.log(`Selected option: ${option}`);
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit}>
-// <label>
-//   <input
-//     type="radio"
-//     value="yes"
-//     checked={option === "yes"}
-//     onChange={handleOptionChange}
-//   />
-//   Yes
-// </label>
-// <label>
-//   <input
-//     type="radio"
-//     value="no"
-//     checked={option === "no"}
-//     onChange={handleOptionChange}
-//   />
-//   No
-// </label>
-//       <button type="submit">Submit</button>
-//     </form>
-//   );
-// }
