@@ -17,11 +17,11 @@ export default function About() {
                   Tattoo Artist
                 </p>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                  I have years of experience and have been dedicated myself to
-                  perfecting my craft. Whether you are looking for a small and
-                  delicate design or a full-sleeve masterpiece, I am committed
-                  to bringing your vision to life and creating a tattoo that you
-                  will be proud to wear for a lifetime.
+                  With years of dedicated experience in perfecting my craft, I
+                  bring your vision to life, crafting tattoos that you'll
+                  proudly wear for a lifetime. From small and delicate designs
+                  to awe-inspiring full-sleeve masterpieces, your unique ideas
+                  are my artistic passion.
                 </p>
                 <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                   <div className="relative pl-9">
@@ -30,9 +30,7 @@ export default function About() {
                     </dt>
                     <dd className="inline">
                       {" "}
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Maiores impedit perferendis suscipit eaque, iste dolor
-                      cupiditate blanditiis ratione.
+                      Specializing in realistic tattooing, meticulously crafting tattoos that capture the finest details, resulting in stunning and lifelike artwork.
                     </dd>
                   </div>
 
@@ -43,8 +41,7 @@ export default function About() {
                     </dt>
                     <dd className="inline">
                       {" "}
-                      Anim aute id magna aliqua ad ad non deserunt sunt. Qui
-                      irure qui lorem cupidatat commodo.
+                      Offering custom tattoos tailored to your unique vision, ensuring that your tattoo is one-of-a-kind and perfectly represents your individuality.
                     </dd>
                   </div>
 
@@ -55,7 +52,7 @@ export default function About() {
                     </dt>
                     <dd className="inline">
                       {" "}
-                      To promote healing and protect the longevity of their new
+                      To promote healing and protect the longevity of a new
                       tattoo.
                     </dd>
                   </div>
