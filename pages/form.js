@@ -100,6 +100,13 @@ export default function Form() {
       <Head>
         <title>Consultation Form</title>
       </Head>
+      {/* <div>
+      <img
+              alt="gallery"
+              className="block h-full w-full rounded-lg object-cover object-center"
+              src="/images/"
+            />
+      </div> */}
       <section className="block max-w-7xl mx-auto rounded-lg bg-gray-200 p-6 shadow-lg dark:bg-neutral-700 text-white">
         <p className="text-center text-3xl">Contact Me : </p>
 
