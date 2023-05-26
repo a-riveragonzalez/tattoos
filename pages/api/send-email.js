@@ -1,4 +1,7 @@
 import nodemailer from "nodemailer";
+import dotenv from "dotenv";
+
+dotenv.config()
 
 export default async function sendEmail(req, res) {
   const {
@@ -16,8 +19,8 @@ export default async function sendEmail(req, res) {
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
-        user: "lettucepressplay@gmail.com",
-        pass: "nqlgjchfdxjskilo",
+        user: process.env.USER,
+        pass: process.env.PASS,
       },
     });
 
